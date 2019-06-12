@@ -602,3 +602,14 @@ In any case, the onus is on you to fail with a helpful message to whoever's debu
 Variable names in Go should be short rather than long.  This is especially true for local variables with limited scope.  Prefer `c` to `lineCount`.  Prefer `i` to `sliceIndex`.
 
 The basic rule: the further from its declaration that a name is used, the more descriptive the name must be. For a method receiver, one or two letters is sufficient. Common variables such as loop indices and readers can be a single letter (`i`, `r`). More unusual things and global variables need more descriptive names.
+
+ * Short variable names work well when the distance between their declaration and last use is short.
+ * Long variable names need to justify themselves; the longer they are the more value they need to provide. Lengthy bureaucratic names carry a low amount of signal compared to their weight on the page.
+ * Don’t include the name of your type in the name of your variable.
+ * Constants should describe the value they hold, not how that value is used.
+ * Prefer single letter variables for loops and branches, single words for parameters and return values, multiple words for functions and package level declarations
+ * Prefer single words for methods, interfaces, and packages.
+ * Remember that the name of a package is part of the name the caller uses to to refer to it, so make use of that.
+
+
+
